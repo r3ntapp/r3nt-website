@@ -1,0 +1,51 @@
+:root {
+  --navy: #1c2b5a;
+  --navy-deep: #141f42;
+  --gold: #c9a646;
+  --ink: #1d2433;
+  --muted: #5a6275;
+  --line: #e3e5eb;
+  --paper: #ffffff;
+  --wash: #f6f7fa;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--navy); }
+a:hover { color: var(--navy-deep); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+.site-header { background: var(--navy-deep); border-bottom: 3px solid var(--gold); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+.brand { color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .08em; font-size: 18px; }
+.brand:hover { color: var(--gold); }
+.site-nav { display: flex; gap: 20px; font-size: 15px; }
+.site-nav a { color: #dfe3ee; text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--gold); }
+
+.hero { background: var(--navy); color: #fff; text-align: center; padding: 56px 0 64px; }
+.hero img { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto 32px; border-radius: 6px; }
+.hero h1 { margin: 0 auto; max-width: 640px; font-size: clamp(26px, 4.4vw, 38px); line-height: 1.25; font-weight: 700; }
+.hero h1::after { content: ""; display: block; width: 64px; height: 3px; background: var(--gold); margin: 22px auto 0; }
+
+.content { padding: 48px 0 56px; }
+.content h2 { font-size: 22px; margin: 36px 0 10px; color: var(--navy); }
+.content h2:first-child { margin-top: 0; }
+.content p, .content li { color: var(--ink); }
+.content .lead { font-size: 19px; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 0; padding: 0; list-style: none; }
+.facts li { background: var(--wash); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 6px; padding: 16px 18px; }
+.facts strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+
+.legal .updated { color: var(--muted); font-size: 15px; }
+.legal h1 { font-size: 30px; color: var(--navy); margin: 0 0 6px; }
+
+.site-footer { background: var(--wash); border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; padding: 28px 0 36px; }
+.site-footer p { margin: 4px 0; }
+.site-footer nav { display: flex; gap: 18px; margin-bottom: 10px; }
